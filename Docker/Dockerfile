@@ -4,4 +4,5 @@ RUN apt-get update && apt-get install -y --no-install-recommends  libcurl4-opens
     mkdir -p /ref/ /script/ /raw_data/ /outdir/ && \
     wget -q -O /miniforge.sh https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh && \
     bash /miniforge.sh -b -p /opt/conda && rm /miniforge.sh && \
-    /opt/conda/bin/conda install --channel conda-forge --channel bioconda --channel defaults kraken2 krakentools krona bracken taxonkit bioawk ncbi-datasets-cli
+    /opt/conda/bin/conda install --channel conda-forge --channel bioconda --channel defaults kraken2 krakentools krona bracken taxonkit bioawk && \
+    wget -q -O /opt/conda/bin/datasets https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/v2/linux-amd64/datasets
